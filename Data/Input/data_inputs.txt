@@ -1,1 +1,80 @@
+Data Input Documentation:
 
+https://www.zillow.com/research/data/
+
+DEFINITIONS OF HOME TYPES
+All Homes: Zillow defines all homes as single-family, condominium and co-operative homes with a county record. Unless specified, all series cover this segment of the housing stock.
+Condo/Co-op: Condominium and co-operative homes.
+Multifamily 5+ units: Units in buildings with 5 or more housing units, that are not condominiums or co-ops.
+Duplex/Triplex/Quadplex: Housing units in buildings with 2,3 or 4 housing units.
+
+Metro_invt_fs_uc_sfrcondo_sm_month:
+
+NEW CONSTRUCTION
+
+New Construction Sales Count: The number of unique new construction homes that sold during the month. Available for the raw cut of single family residence and condo.
+New Construction Median Sale Price: The median sale price at which new construction homes across various geographies were sold during the month.
+New Construction Median Sale Price Per Sqft: The median sale price divided by square footage calculated over all new construction homes across various geographies were sold during the month.
+
+______________________________________________________________________________________________________
+
+Metro_mean_doz_pending_uc_sfrcondo_sm_month:
+
+DAYS ON MARKET AND PRICE CUTS
+
+Days to Pending: How long it takes homes in a region to change to pending status on Zillow.com after first being shown as for sale. The reported figure indicates the number of days (mean or median) that it took for homes that went pending during the week being reported, to go pending. This differs from the old “Days on Zillow” metric in that it excludes the in-contract period before a home sells.
+Days to Close (mean/median): Number of days between the listing going pending and the sale date.
+Share of Listings With a Price Cut: The number of unique properties with a list price at the end of the month that’s less than the list price at the beginning of the month, divided by the number of unique properties with an active listing at some point during the month.
+Price Cuts: The mean and median price cut for listings in a given region during a given time period, expressed as both dollars ($) and as a percentage (%) of list price.
+Note: “Weekly” means you can see the metric’s value on a weekly cadence. The CSVs are updated monthly.
+
+______________________________________________________________________________________________________
+
+Metro_new_con_sales_count_raw_uc_sfrcondo_month:
+
+SALES
+
+The Sales Count Nowcast is the estimated number of unique properties that sold during the month after accounting for the latency between when sales occur and when they are reported. Available only for the raw cut of all homes.
+Sale Price (median/mean): The price at which homes across various geographies were sold.
+Sale-to-List Ratio (mean/median): Ratio of sale vs. final list price.
+Percent of Sales Below/Above List: Share of sales where sale price below/above the final list price; excludes homes sold for exactly the list price.
+Note: “Weekly” means the metric’s value shows weekly details; CSVs updated monthly.
+
+______________________________________________________________________________________________________
+
+Metro_sales_count_now_uc_sfrcondo_month:
+
+FOR-SALE LISTINGS
+
+For-Sale Inventory: The count of unique listings that were active at any time in a given month.
+New Listings: Indicates how many new listings have come on the market in a given month.
+Newly Pending Listings: The count of listings that changed from for-sale to pending status on Zillow.com in a given time period.
+Median List Price: The median price at which homes across various geographies were listed.
+
+______________________________________________________________________________________________________
+
+Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month:
+
+HOME VALUES FORECASTS
+
+Zillow Home Value Forecast (ZHVF): A month-ahead, quarter-ahead and year-ahead forecast of the Zillow Home Value Index (ZHVI). ZHVF is created using the all homes, mid-tier cut of ZHVI and is available both raw and smoothed, seasonally adjusted.
+
+______________________________________________________________________________________________________
+
+Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month:
+
+HOME VALUES
+
+Zillow Home Value Index (ZHVI): A measure of the typical home value and market changes across a given region and housing type. It reflects the typical value for homes in the 35th to 65th percentile range. Available as a smoothed, seasonally adjusted measure and as a raw measure.
+
+Zillow publishes top-tier ZHVI ($, typical value for homes within the 65th to 95th percentile range for a given region) and bottom-tier ZHVI ($, typical value for homes within the 5th to 35th percentile range for a given region).
+
+Zillow also publishes ZHVI for all single-family residences ($, typical value for all single-family homes in a given region), for condo/coops ($), for all homes with 1, 2, 3, 4 and 5+ bedrooms ($), and the ZHVI per square foot ($, typical value of all homes per square foot calculated by taking the estimated home value for each home in a given region and dividing it by the home’s square footage).
+
+______________________________________________________________________________________________________
+
+Metro_zori_uc_sfrcondomfr_sm_month:
+
+RENTALS
+
+Zillow Observed Rent Index (ZORI): A smoothed measure of the typical observed market rate rent across a given region. ZORI is a repeat-rent index that is weighted to the rental housing stock to ensure representativeness across the entire market, not just those homes currently listed for-rent. The index is dollar-denominated by computing the mean of listed rents that fall into the 40th to 60th percentile range for all homes and apartments in a given region, which is weighted to reflect the rental housing stock.
