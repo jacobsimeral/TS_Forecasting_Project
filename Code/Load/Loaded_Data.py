@@ -36,7 +36,7 @@ def melt_merge_data(data: dict):
 
 
 new_construction_sales_count = pd.read_csv('../../Data/Input/New_Construction/Metro_invt_fs_uc_sfrcondo_sm_month.csv')
-new_construction_mean_sales_price = pd.read_csv('../../Data/Input/New_Construction/Metro_invt_fs_uc_sfrcondo_sm_month.csv')
+new_construction_mean_sales_price = pd.read_csv('../../Data/Input/New_Construction/Metro_new_con_mean_sale_price_uc_sfrcondo_month.csv')
 
 mean_days_to_pending = pd.read_csv('../../Data/Input/Days_and_Price_Cuts/Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv')
 mean_price_cut_dol = pd.read_csv('../../Data/Input/Days_and_Price_Cuts/Metro_mean_listings_price_cut_amt_uc_sfrcondo_sm_month.csv')
