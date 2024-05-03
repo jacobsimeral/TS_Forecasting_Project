@@ -52,6 +52,7 @@ def melt_merge_data(data: dict):
        'zillow observed rent index']]
 
 
+<<<<<<< HEAD
 new_construction_sales_count = pd.read_csv('/Users/hassaanulhaq/Downloads/github_repo_project/TS_Forecasting_Project/Data/Input/New_Construction/Metro_invt_fs_uc_sfrcondo_sm_month.csv')
 new_construction_mean_sales_price = pd.read_csv('/Users/hassaanulhaq/Downloads/github_repo_project/TS_Forecasting_Project/Data/Input/New_Construction/Metro_new_con_mean_sale_price_uc_sfrcondo_month.csv')
 
@@ -65,6 +66,21 @@ perc_sold_above_list = pd.read_csv('/Users/hassaanulhaq/Downloads/github_repo_pr
 zillow_HVI = pd.read_csv('/Users/hassaanulhaq/Downloads/github_repo_project/TS_Forecasting_Project/Data/Input/Home_Values/Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv')
 
 zillow_ORI = pd.read_csv('/Users/hassaanulhaq/Downloads/github_repo_project/TS_Forecasting_Project/Data/Input/Rentals/Metro_zori_uc_sfrcondomfr_sm_sa_month.csv')
+=======
+new_construction_sales_count = pd.read_csv('/Users/hassaanulhaq/Documents/GitHub/TS_Forecasting_Project/TS_Forecasting_Project/Data/Input/New_Construction/Metro_invt_fs_uc_sfrcondo_sm_month.csv')
+new_construction_mean_sales_price = pd.read_csv('/Users/hassaanulhaq/Documents/GitHub/TS_Forecasting_Project/TS_Forecasting_Project/Data/Input/New_Construction/Metro_new_con_mean_sale_price_uc_sfrcondo_month.csv')
+
+mean_days_to_pending = pd.read_csv('/Users/hassaanulhaq/Documents/GitHub/TS_Forecasting_Project/TS_Forecasting_Project/Data/Input/Days_and_Price_Cuts/Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv')
+mean_price_cut_dol = pd.read_csv('/Users/hassaanulhaq/Documents/GitHub/TS_Forecasting_Project/TS_Forecasting_Project/Data/Input/Days_and_Price_Cuts/Metro_mean_listings_price_cut_amt_uc_sfrcondo_sm_month.csv')
+mean_price_cut_perc = pd.read_csv('/Users/hassaanulhaq/Documents/GitHub/TS_Forecasting_Project/TS_Forecasting_Project/Data/Input/Days_and_Price_Cuts/Metro_mean_listings_price_cut_perc_uc_sfrcondo_sm_month.csv')
+
+median_sales_price = pd.read_csv('/Users/hassaanulhaq/Documents/GitHub/TS_Forecasting_Project/TS_Forecasting_Project/Data/Input/Sales/Metro_median_sale_price_uc_sfrcondo_sm_month.csv')
+perc_sold_above_list = pd.read_csv('/Users/hassaanulhaq/Documents/GitHub/TS_Forecasting_Project/TS_Forecasting_Project/Data/Input/Sales/Metro_pct_sold_above_list_uc_sfrcondo_sm_month.csv')
+
+zillow_HVI = pd.read_csv('/Users/hassaanulhaq/Documents/GitHub/TS_Forecasting_Project/TS_Forecasting_Project/Data/Input/Home_Values/Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv')
+
+zillow_ORI = pd.read_csv('/Users/hassaanulhaq/Documents/GitHub/TS_Forecasting_Project/TS_Forecasting_Project/Data/Input/Rentals/Metro_zori_uc_sfrcondomfr_sm_sa_month.csv')
+>>>>>>> 7409977 (First Commit)
 
 monthly_data = {
     'New Construction Sales Count': new_construction_sales_count,
