@@ -7,7 +7,18 @@ This module loads various datasets for the project.
 
 """
 
+regions = {
+    "Northeast": ["CT", "ME", "MA", "NH", "RI", "VT", "NJ", "NY", "PA"],
+    "Midwest": ["IL", "IN", "IA", "KS", "MI", "MN", "MO", "NE", "ND", "OH", "SD", "WI"],
+    "South": ["DE", "FL", "GA", "MD", "NC", "SC", "VA", "DC", "WV", "AL", "KY", "MS", "TN", "AR", "LA", "OK", "TX"],
+    "West": ["AZ", "CO", "ID", "MT", "NV", "NM", "UT", "WY", "AK", "CA", "HI", "OR", "WA"]
+}
 
+def assign_region(state):
+    for region, states in regions.items():
+        if state in states:
+            return region
+    return None
 def melt_merge_data(data: dict):
     combined_data = pd.DataFrame()
     for value, dataframe in data.items():
@@ -31,8 +42,14 @@ def melt_merge_data(data: dict):
             combined_data = combined_data.sort_values(by='date')
             combined_data.index = combined_data['date']
             combined_data = combined_data.drop(columns=['date'])
+            combined_data['region'] = combined_data['statename'].apply(assign_region)
 
-    return combined_data
+    return combined_data[['regionid', 'sizerank', 'regionname', 'regiontype','region', 'statename',
+       'new construction sales count', 'new construction mean sales price ($)',
+        'mean days to pending', 'mean price cut ($)',
+       'mean price cut (%)', 'median sales price ($)',
+       'percent sold above list (%)', 'zillow home value index',
+       'zillow observed rent index']]
 
 
 new_construction_sales_count = pd.read_csv('../../Data/Input/New_Construction/Metro_invt_fs_uc_sfrcondo_sm_month.csv')
